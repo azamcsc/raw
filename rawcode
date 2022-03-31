@@ -1,0 +1,115 @@
+Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 10),
+                      Image.asset(
+                        'assets/images/logo.png', scale: 50, //gie tukar
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(' Teroka Seluas Lautan', style: TextStyle(color:kPrimaryColor),),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      IntrinsicHeight(
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                                child: Container(
+                              //width: MediaQuery.of(context).size.width/3,
+                              //height: MediaQuery.of(context).size.height/5,
+                              child: Image.asset(
+                                'assets/images/techno2.jpeg', //gie tukar
+                                fit: BoxFit.fitHeight,
+                                scale: 30,
+                              ),
+                            )),
+                            Expanded(
+                                child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Align(
+                                  alignment: Alignment.topLeft,
+                                  child: ElevatedButton(
+                                      onPressed: () {
+                                        debugPrint('ElevatedButton Clicked');
+                                      },
+                                      child: Text(" UMT "),
+                                      style: ElevatedButton.styleFrom(
+                                        shape: StadiumBorder(),
+                                        primary: kPrimaryColor,
+                                        minimumSize: Size(100, 30),
+                                      ) //primary: Colors.amber ),
+                                      ),
+                                ),
+                                Align(
+                                  alignment: FractionalOffset(0.3, 0),
+                                  child: ElevatedButton(
+                                      onPressed: () {
+                                        debugPrint('ElevatedButton Clicked');
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    HomePageDir()));
+                                      },
+                                      child: Text("Direktori"),
+                                      style: ElevatedButton.styleFrom(
+                                        shape: StadiumBorder(),
+                                        primary: kPrimaryColor,
+                                        minimumSize: Size(100, 30),
+                                      ) //primary: Colors.amber ),
+                                      ),
+                                ),
+                                Align(
+                                  alignment: FractionalOffset(0.3, 0),
+                                  child: ElevatedButton(
+                                      onPressed: () {
+                                        debugPrint('ElevatedButton Clicked');
+                                      },
+                                      child: Text("Live@UMT"),
+                                      style: ElevatedButton.styleFrom(
+                                        shape: StadiumBorder(),
+                                        primary: kPrimaryColor,
+                                        minimumSize: Size(100, 30),
+                                      ) //primary: Colors.amber ),
+                                      ),
+                                ),
+                                Align(
+                                  alignment: Alignment.topLeft,
+                                  child: ElevatedButton(
+                                      onPressed: () {
+                                        debugPrint('ElevatedButton Clicked');
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    LoginPage()));
+                                      },
+                                      child: Text("Login Umt"),
+                                      style: ElevatedButton.styleFrom(
+                                        shape: StadiumBorder(),
+                                        primary: kPrimaryColor,
+                                        minimumSize: Size(100, 30),
+                                      ) //primary: Colors.amber ),
+                                      ),
+                                )
+                              ],
+                            ))
+                          ],
+                        ),
+                      ),
+                      Image.asset(
+                        'assets/images/bangunan.jpeg',
+                        /*scale:5.75*/ //gie tukar
+                        alignment: Alignment.bottomCenter,
+                        // fit:BoxFit.fill,
+                      ),
+                    ],
+                  ),
